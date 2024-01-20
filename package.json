@@ -10,9 +10,11 @@
   },
   "devDependencies": {
     "sass": "^1.70.0",
+    "sass-rem": "^4.0.0",
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "the-new-css-reset": "^1.11.2"
   }
 }
