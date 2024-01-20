@@ -23,7 +23,7 @@
   <div class="wrapper">
     <div class="container">
       <header class="header">
-        <nav class="header__nav">
+        <nav class="header__nav nav">
           <ul class="nav__list nav__list-desktop">
             <li class="nav__item"><a href="#" class="nav__link">Тренировки</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Кемпы</a></li>
@@ -66,12 +66,20 @@
         </div>
         <nav class="header__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link nav__link-mobile">Тренировки</a></li>
-            <li class="nav__item"><a href="#" class="nav__link nav__link-mobile">Кемпы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link nav__link-mobile">Услуги</a></li>
+            <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Тренировки</a></li>
+            <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Кемпы</a></li>
+            <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Услуги</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Тренеры</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">rus</a></li>
+            <li class="nav__item">
+              <div class="nav__wrapper">
+                <a href="#" class="nav__link">rus</a>
+                <ul class="nav__switcher">
+                  <li class="nav__item"><a href="#" class="nav__link">eng</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">ka</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
       </header>
