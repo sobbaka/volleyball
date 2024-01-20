@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(""),
+    url("/fonts/Inter-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url("/fonts/Inter-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter Semi Bold";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local(""),
+    url("/fonts/Inter-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Onest Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(""),
+    url("/fonts/Onest-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Onest Bold";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url("/fonts/Onest-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Onest ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    local(""),
+    url("/fonts/Onest-ExtraBold.ttf") format("ttf");
+}
+
+$font-inter: "Inter", sans-serif;
+$font-onest: "Onest", sans-serif;
