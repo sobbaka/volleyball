@@ -10,6 +10,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    min-height: to.rem(733.14px);
   }
 
   &__description {
@@ -51,7 +52,7 @@
       width: to.rem(564.52px);
       height: to.rem(733.14px);
       position: absolute;
-      right: 18px;
+      right: 34px;
       transform: rotate(5deg);
       z-index: -1;
       max-width: to.rem(564.52px);
@@ -62,12 +63,13 @@
     }
 
     &-bottom {
-      width: 100%;
-      max-width: to.rem(733.14px);
+      width: to.rem(733.14px);
       height: to.rem(603px);
-      resize: horizontal;
-      overflow: hidden;
+      position: absolute;
       transform: rotate(-5deg);
+      top: -94px;
+      z-index: -3;
+      left: 26px;
     }
   }
 
@@ -90,6 +92,13 @@
 
   &__text {
     max-width: to.rem(448px);
+    color: $black;
+    font-family: $font-inter;
+    font-size: to.rem(20px);
+    line-height: to.rem(26px); /*  */
+  }
+  &__text:not(:last-child) {
+    padding: to.rem(68px 0 24px);
   }
 
   &__btn {
