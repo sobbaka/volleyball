@@ -1,0 +1,98 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: to.rem(40px 15px 0);
+}
+
+.hero {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+  }
+
+  &__title {
+    font-family: $font-onest;
+    text-fill-color: $white; // Use for Safari
+    -webkit-text-fill-color: $white; // Use for Chrome
+    -webkit-text-stroke: 1px to.rem() $black; // Use for Chrome
+    -webkit-text-stroke: to.rem(1px) solid $black;
+    text-stroke: to.rem(1px) solid $black;
+    font-size: to.rem(100px);
+    font-weight: 800;
+    line-height: to.rem(110px);
+    letter-spacing: to.rem(2px);
+    text-transform: uppercase;
+
+    &--black {
+      text-fill-color: $black;
+      -webkit-text-fill-color: $black;
+      text-stroke: none;
+      -webkit-text-stroke: none;
+    }
+  }
+
+  &__subtitle {
+    padding-top: to.rem(32px);
+    color: $black;
+    font-family: $font-inter;
+    font-size: to.rem(25px);
+    font-weight: 400;
+    line-height: to.rem(27.756px);
+  }
+
+  &__picture {
+    position: relative;
+    &-top {
+      width: to.rem(564.52px);
+      height: to.rem(733.14px);
+      position: absolute;
+      right: 18px;
+      transform: rotate(5deg);
+      z-index: -1;
+      max-width: to.rem(564.52px);
+
+      // @media (max-width: 1320px) {
+      //   height: calc(733px * (100vw / 1500px));
+      // }
+    }
+
+    &-bottom {
+      width: 100%;
+      max-width: to.rem(733.14px);
+      height: to.rem(603px);
+      resize: horizontal;
+      overflow: hidden;
+      transform: rotate(-5deg);
+    }
+  }
+
+  &__img {
+    &-top {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: right bottom;
+      border: to.rem(16px) solid $yellow;
+    }
+
+    &-bottom {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: right bottom;
+    }
+  }
+
+  &__text {
+    max-width: to.rem(448px);
+  }
+
+  &__btn {
+    margin-top: to.rem(60px);
+  }
+}
