@@ -1,0 +1,69 @@
+.runline {
+  overflow: hidden;
+
+  &__row {
+    display: flex;
+  }
+
+  &__line {
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: to.rem(40px);
+    padding: to.rem(0 20px);
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    &--left {
+      animation-name: marqueeLineLeft;
+    }
+    &--right {
+      animation-name: marqueeLineRight;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__text {
+    flex-shrink: 0;
+    font-family: $font-onest;
+    font-size: to.rem(70px);
+    font-weight: 700;
+    line-height: to.rem(91px);
+    text-transform: uppercase;
+
+    &--yellow {
+      color: #ffe600;
+    }
+
+    &--blue {
+      color: #20bffe;
+    }
+
+    &--green {
+      color: #859d6d;
+    }
+
+    &--black {
+      color: #646464;
+    }
+  }
+
+  @keyframes marqueeLineLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marqueeLineRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+}
