@@ -10,7 +10,8 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    min-height: to.rem(733.14px);
+    // min-height: to.rem(733.14px);
+    padding-bottom: to.rem(250px);
   }
 
   &__description {
@@ -49,17 +50,12 @@
   &__picture {
     position: relative;
     &-top {
-      width: to.rem(564.52px);
+      width: to.rem(532.52px);
       height: to.rem(733.14px);
       position: absolute;
       right: 34px;
       transform: rotate(5deg);
       z-index: -1;
-      max-width: to.rem(564.52px);
-
-      // @media (max-width: 1320px) {
-      //   height: calc(733px * (100vw / 1500px));
-      // }
     }
 
     &-bottom {
