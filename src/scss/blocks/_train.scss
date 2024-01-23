@@ -1,0 +1,23 @@
+.train {
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  padding-top: to.rem(150px);
+  &__title {
+    color: #ffe600;
+    font-family: $font-onest;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: to.rem(110px);
+    text-transform: uppercase;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: to.rem(40px);
+  }
+  &__card {
+    overflow: hidden;
+  }
+}

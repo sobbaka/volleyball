@@ -1,0 +1,25 @@
+.swiper-train {
+  &__wrapper {
+  }
+  &__slide {
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    overflow: hidden;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  &__pagination-wrapper {
+    position: relative;
+  }
+  &__pagination {
+  }
+}
