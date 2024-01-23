@@ -2,7 +2,7 @@
   background-color: $black;
   display: flex;
   justify-content: center;
-  padding-top: to.rem(150px);
+  padding: to.rem(150px 15px);
   &__title {
     color: #ffe600;
     font-family: $font-onest;
@@ -13,11 +13,18 @@
     text-transform: uppercase;
   }
   &__content {
+    padding-top: to.rem(75px);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: to.rem(40px);
+    grid-auto-rows: 1fr; // Make all rows equal height
   }
   &__card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 1320px) {
   }
 }

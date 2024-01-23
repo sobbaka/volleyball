@@ -3,6 +3,7 @@ import Swiper from 'swiper/bundle';
 
 // import styles bundle
 import 'swiper/css/bundle';
+import '../scss/blocks/_swiper-train.scss';
 
 
 const swiper = new Swiper(".swiper-train", {
