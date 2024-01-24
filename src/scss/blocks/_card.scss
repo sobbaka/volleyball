@@ -7,6 +7,20 @@
   }
 
   &__image-block {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    z-index: 100;
+    background-color: $white;
+    color: $black;
+    font-size: to.rem(20px);
+    font-family: $font-inter;
+    padding: to.rem(12px 22px);
+    border-radius: 30px;
+    top: 7%;
+    left: 6%;
   }
 
   &__swiper {
