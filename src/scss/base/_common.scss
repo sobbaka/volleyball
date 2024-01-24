@@ -25,3 +25,20 @@ a {
   border-radius: 35px;
   padding: to.rem(20.5px 72px);
 }
+
+.title {
+  color: $black;
+  font-family: $font-onest;
+  font-size: to.rem(100px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.text {
+  color: $black;
+  font-family: $font-inter;
+  font-size: to.rem(20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: to.rem(26px);
+}

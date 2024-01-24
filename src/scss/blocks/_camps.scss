@@ -1,0 +1,69 @@
+.camps {
+  display: flex;
+  justify-content: center;
+  padding: to.rem(200px 15px);
+  overflow: hidden;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: to.rem(100px 40px);
+    grid-template-areas:
+      "content image"
+      "message message"
+      "slider slider";
+  }
+  &__content {
+    grid-area: content;
+  }
+  &__title {
+  }
+  &__text {
+  }
+  &__text:first-of-type {
+    padding-top: to.rem(75px);
+  }
+  &__text:not(:last-child) {
+    padding-bottom: to.rem(24px);
+  }
+  &__text:last-of-type {
+    padding-bottom: to.rem(65px);
+  }
+  &__btn {
+    background-color: $white;
+    border: 1px solid $black;
+  }
+  &__image-block {
+    padding-right: 19px;
+    grid-area: image;
+  }
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    border: 20px solid #ffe600;
+    transform: rotate(5deg);
+  }
+  &__image {
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__message {
+    grid-area: message;
+    color: $black;
+    text-align: center;
+    font-family: $font-onest;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 91px;
+    text-transform: uppercase;
+  }
+  &__slider {
+    grid-area: slider;
+  }
+}
