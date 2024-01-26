@@ -15,12 +15,13 @@
     z-index: 100;
     background-color: $white;
     color: $black;
-    font-size: to.rem(20px);
-    font-family: $font-inter;
-    padding: to.rem(12px 22px);
+    padding: to.rem(18px 22px);
     border-radius: 30px;
     top: 7%;
     left: 6%;
+    @include font-base($font-inter, 20, 400, 0);
+    @include responsive-font-size-line-height(16, 20, 0, 0, 1320);
+    @include responsive-paddings(16, 18, 16, 18, 16, 22, 16, 22, 1320);
   }
 
   &__swiper {
@@ -28,34 +29,30 @@
 
   &__description {
     padding: to.rem(80px 40px 86px);
+    @include responsive-paddings(32, 80, 32, 86, 16, 40, 16, 40, 1320);
   }
 
   &__title {
     color: $light-grey;
-    font-family: $font-onest;
-    font-size: to.rem(40px);
-    font-weight: 800;
-    line-height: 130%;
     text-transform: uppercase;
     padding-bottom: to.rem(48px);
+    @include font-base($font-onest, 40, 800, 52);
+    @include responsive-font-size-line-height(25, 20, 40, 52, 1320);
+    @include responsive-paddings(0, 0, 32, 48, 0, 0, 0, 0, 1320);
   }
 
   &__subtitle {
     display: block;
     color: $grey;
-    font-family: $font-inter;
-    font-size: to.rem(20px);
-    font-weight: 600;
-    line-height: to.rem(46px);
     text-transform: capitalize;
+    @include font-base($font-inter, 25, 600, 46);
+    @include responsive-font-size-line-height(16, 25, 21, 46, 1320);
   }
 
   &__text {
     color: $light-grey;
-    font-family: $font-inter;
-    font-size: to.rem(20px);
-    font-weight: 400;
-    line-height: to.rem(26px);
+    @include font-base($font-inter, 20, 400, 26);
+    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
   }
   &__text:not(:last-child) {
     padding-bottom: to.rem(24px);
@@ -63,12 +60,11 @@
 
   &__list {
     color: $light-grey;
-    font-family: $font-inter;
-    font-size: to.rem(20px);
-    font-weight: 400;
-    line-height: to.rem(26px);
     padding-left: to.rem(22px);
     padding-bottom: to.rem(28px);
+    @include font-base($font-inter, 20, 400, 26);
+    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
+    @include responsive-paddings(0, 0, 20, 28, 16, 22, 0, 0, 1320);
   }
 
   &__item {
@@ -77,10 +73,8 @@
 
   &__price {
     color: $light-grey;
-    font-family: $font-inter;
-    font-size: to.rem(20px);
-    font-weight: 400;
-    line-height: 130%;
+    @include font-base($font-inter, 20, 400, 26);
+    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
     &--bold {
       font-weight: 700;
     }
@@ -91,8 +85,11 @@
     display: flex;
     flex-direction: column;
     gap: to.rem(12px);
+    @include responsive-paddings(12, 20, 0, 0, 0, 0, 0, 0, 1320);
   }
 
   &__btn {
+    padding: to.rem(25px 0);
+    @include responsive-paddings(18, 25, 18, 25, 0, 0, 0, 0, 1320);
   }
 }

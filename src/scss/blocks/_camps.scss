@@ -1,9 +1,4 @@
 .camps {
-  display: flex;
-  justify-content: center;
-  padding: to.rem(200px 15px);
-  overflow: hidden;
-
   &__container {
     display: grid;
     grid-template-columns: 5fr 7fr;
@@ -12,6 +7,7 @@
       "content image"
       "message message"
       "slider slider";
+    @include responsive-gaps(60, 100, 60, 100, 0, 40, 0, 40, 1320);
   }
   &__content {
     grid-area: content;
@@ -43,6 +39,10 @@
     padding-bottom: 75%;
     border: 20px solid #ffe600;
     transform: rotate(5deg);
+
+    @include media-custom(1320) {
+      border: max(to.rem(12px), to.rem(calc(20 * (100vw / 1320)))) solid #ffe600;
+    }
   }
   &__image {
     top: 0;
@@ -56,12 +56,9 @@
     grid-area: message;
     color: $black;
     text-align: center;
-    font-family: $font-onest;
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 91px;
     text-transform: uppercase;
+    @include font-base($font-onest, 70, 800, 91);
+    @include responsive-font-size-line-height(32, 70, 41, 91, 1320);
   }
   &__slider {
     grid-area: slider;
