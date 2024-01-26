@@ -1,0 +1,37 @@
+@mixin font-base($font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: to.rem(#{$font-size}px);
+  font-weight: $font-weight;
+  line-height: to.rem(#{$line-height}px);
+}
+
+@mixin responsive-font-size-line-height($font-size, $font-size-max, $line-height, $line-height-max, $screen-size) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    font-size: max(to.rem(#{$font-size}px), to.rem(calc(#{$font-size-max} * (100vw / $screen-size))));
+    line-height: max(to.rem(#{$line-height}px), to.rem(calc(#{$line-height-max} * (100vw / $screen-size))));
+  }
+}
+
+@mixin responsive-paddings($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))))
+      max(to.rem(#{$right}px), to.rem(calc(#{$right-max} * (100vw / $screen-size))))
+      max(to.rem(#{$bottom}px), to.rem(calc(#{$bottom-max} * (100vw / $screen-size))))
+      max(to.rem(#{$left}px), to.rem(calc(#{$left-max} * (100vw / $screen-size))));
+  }
+}
+
+@mixin responsive-gaps($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    gap: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))))
+      max(to.rem(#{$right}px), to.rem(calc(#{$right-max} * (100vw / $screen-size))))
+      max(to.rem(#{$bottom}px), to.rem(calc(#{$bottom-max} * (100vw / $screen-size))))
+      max(to.rem(#{$left}px), to.rem(calc(#{$left-max} * (100vw / $screen-size))));
+  }
+}
+
+@mixin media-custom($screen-size, $params...) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    @content;
+  }
+}
