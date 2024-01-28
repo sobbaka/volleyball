@@ -21,6 +21,12 @@
   }
 }
 
+@mixin responsive-paddings-all($size, $size-max, $screen-size) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))));
+  }
+}
+
 @mixin responsive-gaps($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     gap: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))))

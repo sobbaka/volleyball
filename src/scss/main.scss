@@ -1,6 +1,8 @@
 @use "../../node_modules/sass-rem" as to;
+@import "scroll-snap-slider";
 @import "base/fonts";
 @import "base/colors";
+@import "mixins/mixins";
 @import "base/common";
 @import "blocks/header";
 @import "blocks/hero";
@@ -10,3 +12,5 @@
 @import "blocks/swiper-train";
 @import "blocks/camps";
 @import "blocks/camps-swiper";
+@import "blocks/service";
+@import "blocks/swiper-service";

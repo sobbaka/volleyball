@@ -1,0 +1,71 @@
+.swiper-service {
+  &__wrapper {
+    // padding-right: 200px;
+  }
+
+  &__slide {
+  }
+
+  &__slide-last {
+    width: 200px !important;
+  }
+
+  &__body {
+    border-radius: to.rem(40px);
+    border: to.rem(1px) solid $black;
+    overflow: hidden;
+  }
+
+  &__image-wrapper {
+  }
+
+  &__image {
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: to.rem(10px);
+    row-gap: to.rem(40px);
+    padding: to.rem(40px);
+
+    @include responsive-paddings(32, 40, 32, 40, 16, 40, 16, 40, 1320);
+  }
+
+  &__content-cell {
+  }
+
+  &__title {
+    color: $black;
+    text-transform: uppercase;
+    @include font-base($font-onest, 40, 800, 52);
+  }
+
+  &__text {
+  }
+
+  &__list {
+  }
+
+  &__text:not(:last-child),
+  &__list:not(:last-child) {
+    padding-bottom: to.rem(20px);
+  }
+
+  &__subheading {
+    color: $black;
+    padding-bottom: to.rem(20px);
+    @include font-base($font-inter, 20, 700, 26);
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: to.rem(40px);
+    border: to.rem(1px) solid $black;
+    padding: to.rem(35px 0);
+  }
+
+  &__footer {
+    padding-top: to.rem(20px);
+  }
+}

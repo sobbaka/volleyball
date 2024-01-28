@@ -24,6 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const serviceSwiper = new Swiper(".swiper-service", {
+  slidesPerView: 1.62,
+  spaceBetween: 20,
+  // loop: true,
+  navigation: {
+    nextEl: ".camps-swiper__button-next",
+    prevEl: ".camps-swiper__button-prev",
+  },
+});
+
 
 
 
