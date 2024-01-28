@@ -1,0 +1,23 @@
+.instagram {
+  background-color: $black;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    color: $yellow;
+  }
+
+  &__link {
+    color: $white;
+    @include font-base($font-inter, 40, 400, 26);
+
+    padding-bottom: to.rem(9px);
+    border-bottom: to.rem(2px) solid $white;
+  }
+
+  &__body {
+  }
+}
