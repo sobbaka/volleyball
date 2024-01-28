@@ -1,0 +1,56 @@
+.swiper-trainers {
+  &__wrapper {
+  }
+
+  &__slide {
+    cursor: pointer;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    padding-top: 77%;
+  }
+
+  &__image {
+    position: absolute;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transform: rotate(-2deg);
+    &--left {
+      transform: rotate(2deg);
+    }
+  }
+
+  &__content {
+    padding-top: to.rem(55px);
+  }
+
+  &__subheading {
+    padding-bottom: to.rem(30px);
+    @include font-base($font-inter, 20, 700, 26);
+  }
+
+  &__text:not(:last-child) {
+    padding-bottom: to.rem(24px);
+  }
+
+  &__button {
+    top: 150px;
+
+    @include media-custom(1320) {
+      top: max(to.rem(150px), to.rem(calc(150 * (100vw / 1320))));
+    }
+  }
+
+  &__pagination-wrapper {
+    position: relative;
+  }
+
+  &__button-next {
+  }
+
+  &__button-prev {
+  }
+}
