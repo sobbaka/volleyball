@@ -35,5 +35,15 @@ const serviceSwiper = new Swiper(".swiper-service", {
 });
 
 
+const trainersSwiper = new Swiper(".swiper-trainers", {
+  slidesPerView: 3,
+  spaceBetween: 35,
+  // loop: true,
+  navigation: {
+    nextEl: ".swiper-trainers__button-next",
+    prevEl: ".swiper-trainers__button-prev",
+  },
+});
+
 
 

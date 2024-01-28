@@ -2,10 +2,12 @@
   padding: to.rem(150px 0);
   background-color: $yellow;
   overflow: hidden;
+  padding-left: calc((100vw - 1320px) / 2);
   @include responsive-paddings(60, 150, 60, 150, 16, 16, 16, 16, 1320);
 
   &__container {
-    padding-left: calc((100vw - 1320px) / 2);
+    // ;
+    max-width: to.rem(1320px);
   }
 
   &__title {
