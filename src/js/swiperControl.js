@@ -40,8 +40,8 @@ const trainersSwiper = new Swiper(".swiper-trainers", {
   spaceBetween: 35,
   // loop: true,
   navigation: {
-    nextEl: ".swiper-trainers__button-next",
-    prevEl: ".swiper-trainers__button-prev",
+    nextEl: ".swiper-trainers__button--next",
+    prevEl: ".swiper-trainers__button--prev",
   },
 });
 

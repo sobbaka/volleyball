@@ -36,21 +36,38 @@
     padding-bottom: to.rem(24px);
   }
 
-  &__button {
-    top: 150px;
-
-    @include media-custom(1320) {
-      top: max(to.rem(150px), to.rem(calc(150 * (100vw / 1320))));
-    }
-  }
-
   &__pagination-wrapper {
     position: relative;
   }
 
-  &__button-next {
+  &__button {
+    position: absolute;
+    top: to.rem(150px);
+    padding: to.rem(3px);
+    z-index: 1000;
+    width: to.rem(100px);
+    height: to.rem(100px);
+    background-color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: to.rem(50px);
+    @include media-custom(1320) {
+      top: min(to.rem(150px), to.rem(calc(150 * (100vw / 1320) * 0.9)));
+      width: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
+      height: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &--prev {
+      left: 0;
+    }
   }
 
-  &__button-prev {
+  &__button.swiper-button-disabled {
+    background-color: #d8d2c3;
   }
 }
