@@ -15,14 +15,14 @@ a {
 }
 
 .btn {
-  @include font-base($font-onest, 25, 400, 0);
+  @include font-base($font-onest, 25, 400, 32.5);
   color: $black;
   text-align: center;
   text-transform: uppercase;
   background-color: $yellow;
   border-radius: 35px;
-  padding: to.rem(20.5px 72px);
-  @include responsive-font-size-line-height(16, 25, 0, 0, 1320);
+  padding: to.rem(20.5px 0);
+  @include responsive-font-size-line-height(16, 25, 20, 32.5, 1320);
 }
 
 .title {
