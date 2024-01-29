@@ -43,10 +43,30 @@
   }
 
   &__button {
+    padding: to.rem(3px);
+    width: to.rem(100px);
+    height: to.rem(100px);
+    background-color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: to.rem(50px);
+    @include media-custom(1320) {
+      width: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
+      height: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
     &-next {
     }
 
     &-prev {
     }
+  }
+  &__button.swiper-button-disabled {
+    background-color: #d8d2c3;
   }
 }

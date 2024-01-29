@@ -1,0 +1,35 @@
+.footer {
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // position: relative;
+  }
+  &__year {
+    display: block;
+    color: $white;
+    padding-bottom: to.rem(84px);
+    @include font-base($font-inter, 30, 400, 39);
+  }
+
+  &__title {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    text-fill-color: $black; // Use for Safari
+    -webkit-text-fill-color: $black; // Use for Chrome
+    -webkit-text-stroke: 1px to.rem() $white; // Use for Chrome
+    -webkit-text-stroke: to.rem(1px) solid $white;
+    text-stroke: to.rem(1px) solid $white;
+    text-transform: uppercase;
+    margin-left: to.rem(-16px);
+    @include font-base($font-onest, 267, 700, 180);
+
+    // line-height: 191px;
+    @include responsive-font-size-line-height(69, 267, 80, 180, 1320);
+  }
+}
