@@ -24,9 +24,6 @@
     @include responsive-paddings(16, 18, 16, 18, 16, 22, 16, 22, 1320);
   }
 
-  &__swiper {
-  }
-
   &__description {
     padding: to.rem(80px 40px 86px);
     @include responsive-paddings(32, 80, 32, 86, 16, 40, 16, 40, 1320);
@@ -89,7 +86,7 @@
   }
 
   &__btn {
-    padding: to.rem(25px 0);
-    @include responsive-paddings(18, 25, 18, 25, 0, 0, 0, 0, 1320);
+    padding: to.rem(19px 0 16px);
+    @include responsive-paddings(16, 19, 13, 16);
   }
 }

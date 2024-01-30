@@ -18,12 +18,23 @@
   }
 }
 
-@mixin responsive-paddings($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size) {
+@mixin responsive-paddings(
+  $top: 0,
+  $top-max: 0,
+  $bottom: 0,
+  $bottom-max: 0,
+  $left: 0,
+  $left-max: 0,
+  $right: 0,
+  $right-max: 0,
+  $screen-size: 1320,
+  $modificator: 1
+) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
-    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))))
-      max(to.rem(#{$right}px), to.rem(calc(#{$right-max} * (100vw / $screen-size))))
-      max(to.rem(#{$bottom}px), to.rem(calc(#{$bottom-max} * (100vw / $screen-size))))
-      max(to.rem(#{$left}px), to.rem(calc(#{$left-max} * (100vw / $screen-size))));
+    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size) * $modificator)))
+      max(to.rem(#{$right}px), to.rem(calc(#{$right-max} * (100vw / $screen-size) * $modificator)))
+      max(to.rem(#{$bottom}px), to.rem(calc(#{$bottom-max} * (100vw / $screen-size) * $modificator)))
+      max(to.rem(#{$left}px), to.rem(calc(#{$left-max} * (100vw / $screen-size) * $modificator)));
   }
 }
 
