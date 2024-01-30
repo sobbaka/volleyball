@@ -1,5 +1,6 @@
 .runline {
   overflow: hidden;
+  flex-direction: column;
 
   &__row {
     display: flex;
@@ -15,6 +16,11 @@
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+    @include responsive-gaps-all(20, 40);
+    @include responsive-paddings-left(10, 20);
+    @include responsive-paddings-right(10, 20);
+
     &--left {
       animation-name: marqueeLineLeft;
     }
@@ -26,11 +32,9 @@
 
   &__text {
     flex-shrink: 0;
-    font-family: $font-onest;
-    font-size: to.rem(70px);
-    font-weight: 700;
-    line-height: to.rem(91px);
     text-transform: uppercase;
+    @include font-base($font-onest, 70, 700, 91);
+    @include responsive-font-size-line-height(30, 70, 39, 91);
 
     &--yellow {
       color: #ffe600;

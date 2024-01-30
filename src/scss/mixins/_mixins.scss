@@ -74,6 +74,12 @@
   }
 }
 
+@mixin responsive-gaps-all($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    gap: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+
 @mixin media-custom($screen-size: 1320, $params...) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     @content;
