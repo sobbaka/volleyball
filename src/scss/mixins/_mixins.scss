@@ -5,7 +5,13 @@
   line-height: to.rem(#{$line-height}px);
 }
 
-@mixin responsive-font-size-line-height($font-size, $font-size-max, $line-height, $line-height-max, $screen-size) {
+@mixin responsive-font-size-line-height(
+  $font-size,
+  $font-size-max,
+  $line-height,
+  $line-height-max,
+  $screen-size: 1320
+) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     font-size: max(to.rem(#{$font-size}px), to.rem(calc(#{$font-size-max} * (100vw / $screen-size))));
     line-height: max(to.rem(#{$line-height}px), to.rem(calc(#{$line-height-max} * (100vw / $screen-size))));
@@ -21,9 +27,41 @@
   }
 }
 
-@mixin responsive-paddings-all($size, $size-max, $screen-size) {
+@mixin responsive-paddings-all($size, $size-max, $screen-size: 1320, $modificator: 1) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
-    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))));
+    padding: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+@mixin responsive-paddings-top($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding-top: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+@mixin responsive-paddings-bottom($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding-bottom: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+@mixin responsive-paddings-left($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding-left: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+@mixin responsive-paddings-right($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    padding-right: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+
+@mixin responsive-margins-all($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    margin: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+
+@mixin responsive-margins-top($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    margin-top: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
   }
 }
 
