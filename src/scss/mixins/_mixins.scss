@@ -74,8 +74,17 @@
   }
 }
 
-@mixin media-custom($screen-size, $params...) {
+@mixin media-custom($screen-size: 1320, $params...) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     @content;
+  }
+}
+
+@mixin responsive-param($property, $value, $value-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    #{unquote($property)}: max(
+      to.rem(#{$value}px),
+      to.rem(calc(#{$value-max} * (100vw / #{$screen-size}) * #{$modificator}))
+    );
   }
 }

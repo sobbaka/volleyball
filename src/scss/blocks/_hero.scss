@@ -56,8 +56,9 @@
 
   &__bottom {
     grid-area: 2 / 10 / 3 / span 5;
-    padding-top: to.rem(70px);
+    padding-top: to.rem(150px);
     padding-left: to.rem(14px);
+    @include responsive-paddings-top(40, 150);
   }
 
   &__picture {
@@ -97,6 +98,8 @@
       object-fit: cover;
       object-position: right bottom;
       border: to.rem(16px) solid $yellow;
+
+      @include responsive-param("border-width", 12, 16);
     }
 
     &-bottom {
@@ -125,7 +128,7 @@
     margin-top: to.rem(60px);
     padding: to.rem(20.5px 72px);
 
-    @include responsive-paddings(20, 20.5, 20, 20.5, 30, 72, 30, 72, 1320);
+    @include responsive-paddings(16, 20.5, 16, 20.5, 30, 72, 30, 72, 1320);
     @include responsive-margins-top(32, 60);
   }
 }
