@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: to.rem(40px 15px 0);
+  padding: to.rem(0 15px);
 }
 
 .hero {
@@ -25,10 +25,11 @@
     text-stroke: to.rem(1px) solid $black;
     letter-spacing: to.rem(2px);
     text-transform: uppercase;
+    padding-top: to.rem(110px);
 
     @include font-base($font-onest, 100, 800, 110);
-    @include responsive-font-size-line-height(40, 100, 45, 110, 1320);
-    // @include responsive-paddings(0, 0, 0, 0, 0, 0, 0, 0, 1320);
+    @include responsive-font-size-line-height(40, 100, 45, 110);
+    @include responsive-paddings-top(46, 110);
 
     &--black {
       text-fill-color: $black;
@@ -41,10 +42,9 @@
   &__subtitle {
     padding-top: to.rem(32px);
     color: $black;
-    font-family: $font-inter;
-    font-size: to.rem(25px);
-    font-weight: 400;
-    line-height: to.rem(27.756px);
+    @include font-base($font-inter, 32, 400, 27.756);
+    @include responsive-font-size-line-height(16, 32, 17.6, 27.756);
+    @include responsive-paddings-top(24, 32);
   }
 
   &__top {
@@ -54,6 +54,7 @@
   &__bottom {
     grid-area: 2 / 10 / 3 / span 5;
     padding-top: to.rem(70px);
+    padding-left: to.rem(14px);
   }
 
   &__picture {
@@ -63,7 +64,7 @@
       justify-content: flex-end;
     }
     &-bottom {
-      grid-area: 2 / 1 / 3 / span 8;
+      grid-area: 2 / 1 / 3 / span 9;
     }
 
     &-wrapper-top {
@@ -84,8 +85,8 @@
   &__img {
     &-top {
       position: absolute;
-      top: 0;
-      right: 27px;
+      top: to.rem(65px);
+      right: to.rem(27px);
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -95,10 +96,10 @@
 
     &-bottom {
       position: absolute;
-      top: -26px;
-      left: 56px;
+      top: to.rem(61px);
+      left: to.rem(-3px);
       height: 100%;
-      width: 100%;
+      width: 98%;
       object-fit: cover;
       object-position: right bottom;
     }
@@ -109,7 +110,7 @@
     color: $black;
     font-family: $font-inter;
     font-size: to.rem(20px);
-    line-height: to.rem(26px); /*  */
+    line-height: to.rem(26px);
   }
   &__text:not(:last-child) {
     padding: to.rem(68px 0 24px);
@@ -120,5 +121,6 @@
     padding: to.rem(20.5px 72px);
 
     @include responsive-paddings(20, 20.5, 20, 20.5, 30, 72, 30, 72, 1320);
+    @include responsive-margins-top(32, 60);
   }
 }
