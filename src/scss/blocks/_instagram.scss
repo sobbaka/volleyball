@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: to.rem(680px)) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -12,10 +16,12 @@
 
   &__link {
     color: $white;
-    @include font-base($font-inter, 40, 400, 26);
+    @include font-base($font-inter, 40, 400, 20);
 
     padding-bottom: to.rem(9px);
     border-bottom: to.rem(2px) solid $white;
+
+    @include responsive-font-size-line-height(20, 40, 18, 20);
   }
 
   &__body {

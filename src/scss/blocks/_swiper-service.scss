@@ -1,25 +1,9 @@
 .swiper-service {
-  &__wrapper {
-    // padding-right: 200px;
-  }
-
-  &__slide {
-  }
-
-  &__slide-last {
-    width: 200px !important;
-  }
-
   &__body {
     border-radius: to.rem(40px);
     border: to.rem(1px) solid $black;
     overflow: hidden;
-  }
-
-  &__image-wrapper {
-  }
-
-  &__image {
+    cursor: pointer;
   }
 
   &__content {
@@ -28,7 +12,6 @@
     column-gap: to.rem(10px);
     row-gap: to.rem(40px);
     padding: to.rem(40px);
-
     @include responsive-paddings(32, 40, 32, 40, 16, 40, 16, 40, 1320);
   }
 
@@ -39,12 +22,6 @@
     color: $black;
     text-transform: uppercase;
     @include font-base($font-onest, 40, 800, 52);
-  }
-
-  &__text {
-  }
-
-  &__list {
   }
 
   &__text:not(:last-child),
@@ -62,7 +39,8 @@
     width: 100%;
     border-radius: to.rem(40px);
     border: to.rem(1px) solid $black;
-    padding: to.rem(35px 0);
+    padding: to.rem(19px 0 16px);
+    @include responsive-paddings(16, 19, 13, 16);
   }
 
   &__footer {

@@ -7,22 +7,18 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // position: relative;
   }
   &__year {
     display: block;
     color: $white;
-    padding-bottom: to.rem(84px);
+    padding: to.rem(60px 0 84px);
     @include font-base($font-inter, 30, 400, 39);
   }
 
   &__title {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    text-fill-color: $black; // Use for Safari
-    -webkit-text-fill-color: $black; // Use for Chrome
-    -webkit-text-stroke: 1px to.rem() $white; // Use for Chrome
+    text-fill-color: $black;
+    -webkit-text-fill-color: $black;
+    -webkit-text-stroke: 1px to.rem() $white;
     -webkit-text-stroke: to.rem(1px) solid $white;
     text-stroke: to.rem(1px) solid $white;
     text-transform: uppercase;

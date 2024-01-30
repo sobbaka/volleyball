@@ -28,6 +28,9 @@
   &__btn {
     background-color: $white;
     border: 1px solid $black;
+    width: 100%;
+    padding: to.rem(19px 0 16px);
+    @include responsive-paddings(16, 19, 13, 16);
   }
   &__image-block {
     padding-right: 19px;

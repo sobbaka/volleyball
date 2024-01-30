@@ -8,6 +8,7 @@
 
   &__image-block {
     position: relative;
+    cursor: pointer;
   }
 
   &__label {
@@ -20,13 +21,13 @@
     top: 7%;
     left: 6%;
     @include font-base($font-inter, 20, 400, 0);
-    @include responsive-font-size-line-height(16, 20, 0, 0, 1320);
-    @include responsive-paddings(16, 18, 16, 18, 16, 22, 16, 22, 1320);
+    @include responsive-font-size-line-height(16, 20, 0, 0);
+    @include responsive-paddings(16, 18, 16, 18, 16, 22, 16, 22);
   }
 
   &__description {
-    padding: to.rem(80px 40px 86px);
-    @include responsive-paddings(32, 80, 32, 86, 16, 40, 16, 40, 1320);
+    padding: to.rem(60px 40px 86px);
+    @include responsive-paddings(32, 60, 32, 86, 16, 40, 16, 40);
   }
 
   &__title {
@@ -34,8 +35,8 @@
     text-transform: uppercase;
     padding-bottom: to.rem(48px);
     @include font-base($font-onest, 40, 800, 52);
-    @include responsive-font-size-line-height(25, 20, 40, 52, 1320);
-    @include responsive-paddings(0, 0, 32, 48, 0, 0, 0, 0, 1320);
+    @include responsive-font-size-line-height(25, 20, 40, 52);
+    @include responsive-paddings(0, 0, 32, 48, 0, 0, 0, 0);
   }
 
   &__subtitle {
@@ -43,13 +44,13 @@
     color: $grey;
     text-transform: capitalize;
     @include font-base($font-inter, 25, 600, 46);
-    @include responsive-font-size-line-height(16, 25, 21, 46, 1320);
+    @include responsive-font-size-line-height(16, 25, 21, 46);
   }
 
   &__text {
     color: $light-grey;
     @include font-base($font-inter, 20, 400, 26);
-    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
+    @include responsive-font-size-line-height(16, 20, 21, 26);
   }
   &__text:not(:last-child) {
     padding-bottom: to.rem(24px);
@@ -60,8 +61,8 @@
     padding-left: to.rem(22px);
     padding-bottom: to.rem(28px);
     @include font-base($font-inter, 20, 400, 26);
-    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
-    @include responsive-paddings(0, 0, 20, 28, 16, 22, 0, 0, 1320);
+    @include responsive-font-size-line-height(16, 20, 21, 26);
+    @include responsive-paddings(0, 0, 20, 28, 16, 22, 0, 0);
   }
 
   &__item {
@@ -71,7 +72,7 @@
   &__price {
     color: $light-grey;
     @include font-base($font-inter, 20, 400, 26);
-    @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
+    @include responsive-font-size-line-height(16, 20, 21, 26);
     &--bold {
       font-weight: 700;
     }
@@ -82,11 +83,17 @@
     display: flex;
     flex-direction: column;
     gap: to.rem(12px);
-    @include responsive-paddings(12, 20, 0, 0, 0, 0, 0, 0, 1320);
+    @include responsive-paddings(12, 20, 0, 0, 0, 0, 0, 0);
   }
 
   &__btn {
     padding: to.rem(19px 0 16px);
     @include responsive-paddings(16, 19, 13, 16);
+  }
+
+  &__btn:nth-child(2) {
+    background-color: transparent;
+    border: to.rem(1px) solid $yellow;
+    color: $white;
   }
 }

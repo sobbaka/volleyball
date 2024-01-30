@@ -76,7 +76,7 @@
   }
 }
 
-@mixin responsive-gaps($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size) {
+@mixin responsive-gaps($top, $top-max, $bottom, $bottom-max, $left, $left-max, $right, $right-max, $screen-size: 1320) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     gap: max(to.rem(#{$top}px), to.rem(calc(#{$top-max} * (100vw / $screen-size))))
       max(to.rem(#{$right}px), to.rem(calc(#{$right-max} * (100vw / $screen-size))))
@@ -90,8 +90,18 @@
     gap: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
   }
 }
+@mixin responsive-gaps-row($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    row-gap: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
+@mixin responsive-gaps-column($size, $size-max, $screen-size: 1320, $modificator: 1) {
+  @media screen and (max-width: to.rem(#{$screen-size}px)) {
+    column-gap: max(to.rem(#{$size}px), to.rem(calc(#{$size-max} * (100vw / $screen-size) * #{$modificator})));
+  }
+}
 
-@mixin media-custom($screen-size: 1320, $params...) {
+@mixin media-custom($screen-size: 1320) {
   @media screen and (max-width: to.rem(#{$screen-size}px)) {
     @content;
   }
