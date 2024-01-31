@@ -1,51 +1,45 @@
 .camps {
   &__container {
     display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: to.rem(100px 40px);
-    grid-template-areas:
-      "content image"
-      "message message"
-      "slider slider";
-    @include responsive-gaps(60, 100, 60, 100, 0, 40, 0, 40, 1320);
+    grid-template-columns: repeat(12, 1fr);
+    gap: fluid-value(60px, 100px) fluid-value(10px, 40px);
   }
   &__content {
-    grid-area: content;
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
   }
+
   &__title {
   }
   &__text {
   }
   &__text:first-of-type {
-    padding-top: to.rem(75px);
+    padding-top: fluid-value(20px, 75px);
   }
   &__text:not(:last-child) {
-    padding-bottom: to.rem(24px);
+    padding-bottom: fluid-value(16px, 24px);
   }
   &__text:last-of-type {
-    padding-bottom: to.rem(65px);
+    padding-bottom: fluid-value(32px, 65px);
   }
   &__btn {
     background-color: $white;
-    border: 1px solid $black;
+    border: to.rem(1px) solid $black;
     width: 100%;
-    padding: to.rem(19px 0 16px);
-    @include responsive-paddings(16, 19, 13, 16);
+    padding: fluid-value(16px, 19px) 0 fluid-value(13px, 16px);
   }
   &__image-block {
-    padding-right: 19px;
+    padding-right: to.rem(19px);
     grid-area: image;
+    grid-row: 1 / 2;
+    grid-column: 6 / 13;
   }
   &__image-wrapper {
     position: relative;
     width: 100%;
     padding-bottom: 75%;
-    border: 20px solid #ffe600;
+    border: fluid-value(12px, 20px) solid #ffe600;
     transform: rotate(5deg);
-
-    @include media-custom(1320) {
-      border: max(to.rem(12px), to.rem(calc(20 * (100vw / 1320)))) solid #ffe600;
-    }
   }
   &__image {
     top: 0;
@@ -56,14 +50,16 @@
   }
 
   &__message {
-    grid-area: message;
-    color: $black;
+    @include font-mixin($font-onest, 800, $black);
+    font-size: fluid-value(32px, 70px);
+    line-height: fluid-value(41px, 91px);
     text-align: center;
     text-transform: uppercase;
-    @include font-base($font-onest, 70, 800, 91);
-    @include responsive-font-size-line-height(32, 70, 41, 91, 1320);
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
   }
   &__slider {
-    grid-area: slider;
+    grid-row: 3 / 4;
+    grid-column: 1 / 13;
   }
 }

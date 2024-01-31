@@ -2,7 +2,7 @@
   &__content {
     height: 100%;
     border-radius: 35px;
-    border: 1px solid $yellow;
+    border: to.rem(1px) solid $yellow;
     overflow: hidden;
   }
 
