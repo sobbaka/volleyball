@@ -5,24 +5,20 @@
     color: #ffe600;
   }
   &__content {
-    padding-top: to.rem(75px);
+    padding-top: fluid-value(40px, 75px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: to.rem(40px);
+    row-gap: fluid-value(32px, 100px);
+    column-gap: fluid-value(10px, 40px);
     grid-auto-rows: 1fr;
 
     @include media-custom($screen-size: 660) {
       grid-template-columns: 1fr;
     }
-
-    @include responsive-gaps-all(32, 40);
   }
   &__card {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  }
-
-  @media screen and (max-width: 1320px) {
   }
 }

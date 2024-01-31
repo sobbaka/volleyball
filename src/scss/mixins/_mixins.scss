@@ -5,6 +5,12 @@
   line-height: to.rem(#{$line-height}px);
 }
 
+@mixin font-mixin($font-family, $font-weight, $font-color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  color: $font-color;
+}
+
 @mixin responsive-font-size-line-height(
   $font-size,
   $font-size-max,

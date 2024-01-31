@@ -1,0 +1,21 @@
+@use "sass:math";
+@use "../../../node_modules/sass-rem" as to;
+
+$default-min-bp: 390px;
+$default-max-bp: 1320px;
+
+@function fluid($min-size, $max-size, $min-breakpoint: $default-min-bp, $max-breakpoint: $default-max-bp, $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept-rem: to.rem($min-size - $slope * $min-breakpoint);
+  $min-size-rem: to.rem($min-size);
+  $max-size-rem: to.rem($max-size);
+  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
+}
+
+@function fluid-value($min-size, $max-size, $min-breakpoint: $default-min-bp, $max-breakpoint: $default-max-bp) {
+  @return #{fluid($min-size, $max-size, $min-breakpoint, $default-max-bp)};
+}
+
+// Example usage:
+// font-size: fluid-value(10px, 20px);

@@ -15,37 +15,32 @@ a {
 }
 
 .btn {
-  cursor: pointer;
-  color: $black;
+  @include font-mixin($font-onest, 400, $black);
+  font-size: fluid-value(16px, 25px);
+  padding: fluid-value(16px, 20px) 0 fluid-value(18px, 20px);
+  border-radius: fluid-value(25px, 35px);
   text-align: center;
   text-transform: uppercase;
   background-color: $yellow;
-  border-radius: 35px;
-  padding: to.rem(19px 0 16px);
-  @include font-base($font-onest, 25, 400, 32.5);
-  @include responsive-paddings(16, 19, 13, 16);
+  cursor: pointer;
 }
 
 .title {
-  color: $black;
+  @include font-mixin($font-onest, 800, $black);
+  font-size: fluid-value(16px, 100px);
+  line-height: fluid-value(16px, 110px);
   text-transform: uppercase;
-  @include font-base($font-onest, 100, 800, 110);
-  @include responsive-font-size-line-height(50, 100, 60, 110, 1320);
 }
 
 .text {
-  color: $black;
-  @include font-base($font-inter, 20, 400, 26);
-  @include responsive-font-size-line-height(16, 20, 21, 26, 1320);
+  @include font-mixin($font-inter, 400, $black);
+  font-size: fluid-value(16px, 20px);
+  line-height: fluid-value(20.8px, 26px);
 }
 
 .section {
   display: flex;
   justify-content: center;
-  padding: to.rem(150px 16px);
+  padding: fluid-value(60px, 150px) to.rem(16px);
   overflow: hidden;
-
-  @media screen and (max-width: 1320px) {
-    padding: max(to.rem(60px), to.rem(calc(150 * (100vw / 1320)))) to.rem(16px);
-  }
 }

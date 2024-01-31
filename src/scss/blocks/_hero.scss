@@ -24,13 +24,13 @@
     -webkit-text-stroke: 1px to.rem() $black; // Use for Chrome
     -webkit-text-stroke: to.rem(1px) solid $black;
     text-stroke: to.rem(1px) solid $black;
-    letter-spacing: to.rem(2px);
+    font-family: $font-inter;
     text-transform: uppercase;
-    padding-top: to.rem(110px);
-
-    @include font-base($font-onest, 100, 800, 110);
-    @include responsive-font-size-line-height(40, 100, 45, 110);
-    @include responsive-paddings-top(46, 110);
+    font-weight: 800;
+    font-size: fluid-value(40px, 100px, 320px);
+    letter-spacing: fluid-value(1px, 2px);
+    padding-top: fluid-value(46px, 108px);
+    line-height: fluid-value(55px, 110px);
 
     &--black {
       text-fill-color: $black;
@@ -41,11 +41,9 @@
   }
 
   &__subtitle {
-    padding-top: to.rem(32px);
-    color: $black;
-    @include font-base($font-inter, 32, 400, 27.756);
-    @include responsive-font-size-line-height(16, 32, 17.6, 27.756);
-    @include responsive-paddings-top(24, 32);
+    font-size: fluid-value(16px, 25px);
+    line-height: fluid-value(17.764px, 27.756px);
+    padding-top: fluid-value(24px, 32px);
   }
 
   &__top {
@@ -56,9 +54,7 @@
 
   &__bottom {
     grid-area: 2 / 10 / 3 / span 5;
-    padding-top: to.rem(150px);
     padding-left: to.rem(14px);
-    @include responsive-paddings-top(40, 150);
   }
 
   &__picture {
@@ -97,9 +93,11 @@
       width: 100%;
       object-fit: cover;
       object-position: right bottom;
-      border: to.rem(16px) solid $yellow;
+      border: fluid-value(12px, 16px) solid $yellow;
 
-      @include responsive-param("border-width", 12, 16);
+      @media screen and (max-width: to.rem(860px)) {
+        right: 0;
+      }
     }
 
     &-bottom {
@@ -115,20 +113,14 @@
 
   &__text {
     max-width: to.rem(448px);
-    color: $black;
-    font-family: $font-inter;
-    font-size: to.rem(20px);
-    line-height: to.rem(26px);
   }
   &__text:not(:last-child) {
-    padding: to.rem(68px 0 24px);
+    padding: fluid-value(40px, 150px) 0 to.rem(24px);
   }
 
   &__btn {
-    margin-top: to.rem(60px);
-    padding: to.rem(20.5px 72px);
-
-    @include responsive-paddings(16, 20.5, 16, 20.5, 30, 72, 30, 72, 1320);
-    @include responsive-margins-top(32, 60);
+    padding-left: fluid-value(58px, 74px);
+    padding-right: fluid-value(58px, 74px);
+    margin-top: fluid-value(32px, 60px);
   }
 }
