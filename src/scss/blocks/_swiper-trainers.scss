@@ -28,8 +28,8 @@
   }
 
   &__subheading {
-    padding-bottom: to.rem(30px);
-    @include font-base($font-inter, 20, 700, 26);
+    padding-bottom: fluid-value(20px, 30px);
+    @include font-base($font-inter, fluid-value(20px, 25px), 700, fluid-value(26px, 32.5px));
   }
 
   &__text:not(:last-child) {
@@ -42,32 +42,28 @@
 
   &__button {
     position: absolute;
-    top: to.rem(150px);
+    top: fluid-value(75px, 150px);
     padding: to.rem(3px);
     z-index: 1000;
-    width: to.rem(100px);
-    height: to.rem(100px);
+    width: fluid-value(50px, 100px);
+    height: fluid-value(50px, 100px);
     background-color: $yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: to.rem(50px);
-    @include media-custom(1320) {
-      top: min(to.rem(150px), to.rem(calc(150 * (100vw / 1320) * 0.9)));
-      width: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
-      height: min(to.rem(100px), to.rem(calc(100 * (100vw / 1320) * 0.9)));
-    }
 
     &--next {
-      right: 0;
+      right: fluid-value(47px, 94px);
     }
 
     &--prev {
-      left: 0;
+      left: fluid-value(47px, 94px);
     }
   }
 
   &__button.swiper-button-disabled {
     background-color: #d8d2c3;
+    display: none;
   }
 }

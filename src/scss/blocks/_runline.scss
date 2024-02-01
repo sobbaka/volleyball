@@ -11,16 +11,11 @@
     min-width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: to.rem(40px);
-    padding: to.rem(0 20px);
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
-    @include responsive-gaps-all(20, 40);
-    @include responsive-paddings-left(10, 20);
-    @include responsive-paddings-right(10, 20);
-
+    gap: fluid-value(20px, 40px);
+    padding: 0 fluid-value(10px, 20px);
     &--left {
       animation-name: marqueeLineLeft;
     }
@@ -33,8 +28,7 @@
   &__text {
     flex-shrink: 0;
     text-transform: uppercase;
-    @include font-base($font-onest, 70, 700, 91);
-    @include responsive-font-size-line-height(30, 70, 39, 91);
+    @include font-base($font-onest, fluid-value(30px, 70px), 700, fluid-value(39px, 91px));
 
     &--yellow {
       color: #ffe600;

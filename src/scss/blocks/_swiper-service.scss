@@ -10,9 +10,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: to.rem(10px);
-    row-gap: to.rem(40px);
-    padding: to.rem(40px);
-    @include responsive-paddings(32, 40, 32, 40, 16, 40, 16, 40, 1320);
+    row-gap: fluid-value(24px, 40px);
+    padding: fluid-value(32px, 40px) fluid-value(16px, 40px);
+
+    @media screen and (max-width: to.rem(800px)) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content-cell {
@@ -21,7 +24,7 @@
   &__title {
     color: $black;
     text-transform: uppercase;
-    @include font-base($font-onest, 40, 800, 52);
+    @include font-base($font-onest, fluid-value(25px, 40px), 800, fluid-value(32.5px, 52px));
   }
 
   &__text:not(:last-child),
@@ -32,15 +35,14 @@
   &__subheading {
     color: $black;
     padding-bottom: to.rem(20px);
-    @include font-base($font-inter, 20, 700, 26);
+    @include font-base($font-inter, fluid-value(16px, 20px), 700, fluid-value(20.8px, 26px));
   }
 
   &__btn {
     width: 100%;
-    border-radius: to.rem(40px);
+    border-radius: fluid-value(20px, 40px);
     border: to.rem(1px) solid $black;
-    padding: to.rem(19px 0 16px);
-    @include responsive-paddings(16, 19, 13, 16);
+    padding: fluid-value(16px, 19px) 0 fluid-value(13px, 16px);
   }
 
   &__footer {

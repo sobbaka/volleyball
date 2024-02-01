@@ -27,8 +27,8 @@ a {
 
 .title {
   @include font-mixin($font-onest, 800, $black);
-  font-size: fluid-value(16px, 100px);
-  line-height: fluid-value(16px, 110px);
+  font-size: fluid-value(45px, 100px);
+  line-height: fluid-value(55px, 110px);
   text-transform: uppercase;
 }
 

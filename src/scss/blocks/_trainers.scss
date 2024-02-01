@@ -1,6 +1,6 @@
 .trainers {
   overflow: hidden;
   &__title {
-    padding-bottom: to.rem(78px);
+    padding-bottom: fluid-value(40px, 75px);
   }
 }

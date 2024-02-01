@@ -11,21 +11,18 @@
   &__year {
     display: block;
     color: $white;
-    padding: to.rem(60px 0 84px);
-    @include font-base($font-inter, 30, 400, 39);
+    padding: fluid-value(24px, 60px) 0 fluid-value(32px, 84px);
+    @include font-base($font-inter, fluid-value(16px, 30px), 400, fluid-value(20.8px, 39px));
   }
 
   &__title {
     text-fill-color: $black;
     -webkit-text-fill-color: $black;
-    -webkit-text-stroke: 1px to.rem() $white;
+    -webkit-text-stroke: to.rem(1px) $white;
     -webkit-text-stroke: to.rem(1px) solid $white;
     text-stroke: to.rem(1px) solid $white;
     text-transform: uppercase;
     margin-left: to.rem(-16px);
-    @include font-base($font-onest, 267, 700, 180);
-
-    // line-height: 191px;
-    @include responsive-font-size-line-height(69, 267, 80, 180, 1320);
+    @include font-base($font-onest, fluid-value(69px, 267px), 700, fluid-value(80px, 180px));
   }
 }

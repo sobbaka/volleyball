@@ -1,19 +1,11 @@
 .service {
-  padding: to.rem(150px 0);
+  // padding: to.rem(150px 0);
   background-color: $yellow;
   overflow: hidden;
-  padding-left: calc((100vw - 1320px) / 2);
-  @include responsive-paddings(60, 150, 60, 150, 16, 16, 16, 16, 1320);
-
-  &__container {
-    // ;
-    max-width: to.rem(1320px);
-  }
+  display: flex;
+  justify-content: center;
 
   &__title {
-    padding-bottom: to.rem(40px);
-  }
-
-  &__swiper {
+    padding-bottom: fluid-value(40px, 75px);
   }
 }

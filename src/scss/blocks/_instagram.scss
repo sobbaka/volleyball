@@ -15,13 +15,10 @@
   }
 
   &__link {
+    @include font-base($font-inter, fluid-value(20px, 40px), 400, fluid-value(18px, 20px));
     color: $white;
-    @include font-base($font-inter, 40, 400, 20);
-
-    padding-bottom: to.rem(9px);
-    border-bottom: to.rem(2px) solid $white;
-
-    @include responsive-font-size-line-height(20, 40, 18, 20);
+    padding-bottom: fluid-value(2px, 13px);
+    border-bottom: fluid-value(1px, 2px) solid $white;
   }
 
   &__body {
