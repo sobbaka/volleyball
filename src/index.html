@@ -24,13 +24,7 @@
 
   <header class="header">
     <div class="container header__container">
-      <nav class="header__nav nav">
-        <ul class="nav__list nav__list-desktop">
-          <li class="nav__item"><a href="#" class="nav__link">Тренировки</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Кемпы</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-        </ul>
-      </nav>
+
       <div class="header__logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
           <mask id="mask0_21_332" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="80"
@@ -65,21 +59,38 @@
           </g>
         </svg>
       </div>
-      <nav class="header__nav">
+      <nav class="header__nav nav">
+
+        <div class="toggle-menu">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <ul class="nav__list">
-          <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Тренировки</a></li>
-          <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Кемпы</a></li>
-          <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Услуги</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Тренеры</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-          <li class="nav__item">
-            <div class="nav__wrapper">
-              <a href="#" class="nav__link">rus</a>
-              <ul class="nav__switcher">
-                <li class="nav__item"><a href="#" class="nav__link">eng</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">ka</a></li>
-              </ul>
-            </div>
+          <li class="nav__item-left">
+            <ul class="nav__list-left">
+              <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Тренировки</a></li>
+              <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Кемпы</a></li>
+              <li class="nav__item nav__item-mobile"><a href="#" class="nav__link">Услуги</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__item-right">
+            <ul class="nav__list-right">
+              <li class="nav__item"><a href="#" class="nav__link">Тренеры</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+              <li class="nav__item">
+                <div class="nav__wrapper">
+                  <a href="#" class="nav__link">rus</a>
+                  <ul class="nav__switcher">
+                    <li class="nav__item"><a href="#" class="nav__link">eng</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">ka</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -526,13 +537,11 @@
         </div>
       </div>
     </section>
-    <section class="service">
+    <section class="service section">
 
       <div class="container">
 
-      </div>
 
-      <div class="service__container">
         <h2 class="service__title title">услуги</h2>
 
         <div class="service__swiper swiper-service">
@@ -572,7 +581,8 @@
                       <li class="swiper-service__list-item text">Приятные цены</li>
                     </ul>
 
-                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на новый
+                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на
+                      новый
                       уровень!</p>
                   </div>
                   <div class="swiper-service__content-cell">
@@ -626,7 +636,8 @@
                       <li class="swiper-service__list-item text">Приятные цены</li>
                     </ul>
 
-                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на новый
+                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на
+                      новый
                       уровень!</p>
                   </div>
                   <div class="swiper-service__content-cell">
@@ -680,7 +691,8 @@
                       <li class="swiper-service__list-item text">Приятные цены</li>
                     </ul>
 
-                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на новый
+                    <p class="swiper-service__text text">Забронируйте свой корт сегодня и перенесите вашу игру на
+                      новый
                       уровень!</p>
                   </div>
                   <div class="swiper-service__content-cell">
@@ -703,7 +715,11 @@
           </div>
         </div>
 
+
+
       </div>
+
+
     </section>
 
     <section class="section trainers">

@@ -1,23 +1,58 @@
 @import "./nav";
 
 .header {
-  padding-top: to.rem(12px);
+  padding: to.rem(12px) to.rem(16px);
   width: 100%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  @media (max-width: to.rem(760px)) {
+    padding: to.rem(40px) to.rem(16px);
 
-  @media screen and (max-width: 1320px) {
-    padding: to.rem(12px 16px 0);
+    // &:has(.toggle-menu > input:checked) {
+    //   padding: 0;
+    // }
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    display: grid;
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    @media (max-width: to.rem(760px)) {
+      justify-items: baseline;
+    }
   }
+
   &__nav {
+    width: 100%;
+    position: absolute;
+    grid-row: 1/2;
+    grid-column: 1/4;
+
+    @media (max-width: to.rem(760px)) {
+      width: calc(100vw + 16px * 2);
+      top: 0;
+      grid-column: 1/4;
+      height: calc(100dvh + 40px);
+    }
   }
 
   &__logo {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    height: fluid-value(50px, 80px);
+    width: fluid-value(50px, 80px);
+
+    @media (max-width: to.rem(760px)) {
+      grid-column: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }
