@@ -5,10 +5,6 @@
   @media (max-width: to.rem(760px)) {
     display: flex;
     justify-content: center;
-
-    &:has(.toggle-menu > input:checked) &__list {
-      transform: translate(-16px, -40px);
-    }
   }
 
   &__list {
@@ -19,28 +15,34 @@
     @media (max-width: to.rem(760px)) {
       justify-content: flex-start;
       flex-direction: column;
+      align-items: center;
       background-color: $yellow;
-      z-index: 88888;
-      padding-left: 44%;
-      transform: translate(-1000px, 0px);
+      padding-top: to.rem(98px);
+      row-gap: to.rem(40px);
     }
   }
 
   &__list-right {
     display: flex;
-    column-gap: fluid-value(20px, 60px);
+    column-gap: fluid-value(20px, 60px, 760px);
     @media (max-width: to.rem(760px)) {
+      min-width: to.rem(300px);
+      row-gap: to.rem(40px);
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
     }
   }
 
   &__list-left {
     display: flex;
-    column-gap: fluid-value(20px, 60px);
+    column-gap: fluid-value(20px, 60px, 760px);
     @media (max-width: to.rem(760px)) {
+      min-width: to.rem(300px);
+      row-gap: to.rem(40px);
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
     }
   }
 
@@ -60,6 +62,10 @@
     font-family: $font-inter;
     font-size: to.rem(17px);
     font-weight: 400;
+
+    @media (max-width: to.rem(760px)) {
+      font-size: to.rem(50px);
+    }
   }
 
   &__switcher {

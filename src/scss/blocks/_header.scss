@@ -1,20 +1,18 @@
 @import "./nav";
 
 .header {
-  padding: to.rem(12px) to.rem(16px);
   width: 100%;
   display: flex;
   justify-content: center;
-  overflow: hidden;
-  @media (max-width: to.rem(760px)) {
-    padding: to.rem(40px) to.rem(16px);
 
-    // &:has(.toggle-menu > input:checked) {
-    //   padding: 0;
-    // }
+  @media (max-width: to.rem(760px)) {
+    &:has(.toggle-menu > input:checked) &__nav {
+      transform: translate(0, 0);
+    }
   }
 
   &__container {
+    padding: to.rem(40px) to.rem(16px);
     position: relative;
     display: grid;
     align-items: center;
@@ -33,10 +31,13 @@
     grid-column: 1/4;
 
     @media (max-width: to.rem(760px)) {
-      width: calc(100vw + 16px * 2);
-      top: 0;
+      width: 100vw;
+      top: -40px;
+      left: -16px;
       grid-column: 1/4;
-      height: calc(100dvh + 40px);
+      height: 100vh;
+      z-index: 88888;
+      transform: translate(-1000px, 0px);
     }
   }
 
