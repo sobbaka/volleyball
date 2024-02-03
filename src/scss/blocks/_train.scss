@@ -12,7 +12,7 @@
     column-gap: fluid-value(10px, 40px);
     grid-auto-rows: 1fr;
 
-    @include media-custom($screen-size: 660) {
+    @include media-custom($screen-size: 760) {
       grid-template-columns: 1fr;
     }
   }
