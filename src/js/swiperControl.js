@@ -2,6 +2,7 @@
 import Swiper from 'swiper/bundle';
 
 document.addEventListener("DOMContentLoaded", function () {
+
   const trainSwiper = new Swiper(".swiper-train", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -24,8 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const screenWidth = window.innerWidth;
+
 const serviceSwiper = new Swiper(".swiper-service", {
-  slidesPerView: 1.62,
+  slidesPerView: screenWidth >= 760 ? 1.62 : 1.1,
   spaceBetween: 20,
   // loop: true,
   // navigation: {
@@ -36,7 +39,7 @@ const serviceSwiper = new Swiper(".swiper-service", {
 
 
 const trainersSwiper = new Swiper(".swiper-trainers", {
-  slidesPerView: 3,
+  slidesPerView: screenWidth >= 760 ? 3 : 1.3,
   spaceBetween: 35,
   // loop: true,
   navigation: {
