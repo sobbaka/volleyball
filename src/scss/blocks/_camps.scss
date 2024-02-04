@@ -9,10 +9,6 @@
     grid-column: 1 / 6;
   }
 
-  &__title {
-  }
-  &__text {
-  }
   &__text:first-of-type {
     padding-top: fluid-value(20px, 75px);
   }
@@ -61,5 +57,12 @@
   &__slider {
     grid-row: 3 / 4;
     grid-column: 1 / 13;
+  }
+
+  @media (max-width: to.rem(760px)) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
