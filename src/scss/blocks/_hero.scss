@@ -28,10 +28,10 @@
     -webkit-text-stroke: 1px to.rem() $black; // Use for Chrome
     -webkit-text-stroke: to.rem(1px) solid $black;
     text-stroke: to.rem(1px) solid $black;
-    font-family: $font-inter;
+    font-family: $font-onest;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: fluid-value(40px, 100px, 320px);
+    font-size: fluid-value(40px, 88px, 320px);
     letter-spacing: fluid-value(1px, 2px);
     padding-top: fluid-value(46px, 108px);
     line-height: fluid-value(55px, 110px);
