@@ -1,8 +1,10 @@
 .footer {
+  position: relative;
   background-color: $black;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  padding: 6% to.rem(16px) 21%;
   &__container {
     display: flex;
     justify-content: center;
@@ -11,11 +13,16 @@
   &__year {
     display: block;
     color: $white;
-    padding: fluid-value(24px, 60px) 0 fluid-value(32px, 84px);
     @include font-base($font-inter, fluid-value(16px, 30px), 400, fluid-value(20.8px, 39px));
   }
 
   &__title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: to.rem(-10px);
+    padding: 0 to.rem(16px);
     text-fill-color: $black;
     -webkit-text-fill-color: $black;
     -webkit-text-stroke: to.rem(1px) $white;
