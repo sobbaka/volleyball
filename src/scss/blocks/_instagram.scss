@@ -1,17 +1,28 @@
 .instagram {
   background-color: $black;
+
   &__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: fluid-value(40px, 75px);
 
-    @media screen and (max-width: to.rem(680px)) {
+    @media screen and (max-width: to.rem(1225px)) {
       flex-direction: column;
+      align-items: flex-start;
+
+      &__title {
+        padding-bottom: to.rem(24px);
+      }
     }
   }
 
   &__title {
     color: $yellow;
+
+    @media screen and (max-width: to.rem(1225px)) {
+      padding-bottom: to.rem(24px);
+    }
   }
 
   &__link {
