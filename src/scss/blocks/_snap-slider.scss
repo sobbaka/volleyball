@@ -1,0 +1,16 @@
+.snap-slider {
+  &__slide {
+    position: relative;
+    width: 100%;
+    padding-bottom: fluid-value(308px, 552px);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

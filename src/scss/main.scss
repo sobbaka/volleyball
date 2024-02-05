@@ -1,4 +1,5 @@
 @use "../../node_modules/sass-rem" as to;
+@import "scroll-snap-slider";
 @import "mixins/fluid";
 @import "scroll-snap-slider";
 @import "base/fonts";
@@ -21,3 +22,4 @@
 @import "blocks/instagram";
 @import "blocks/contacts";
 @import "blocks/footer";
+@import "blocks/snap-slider";
