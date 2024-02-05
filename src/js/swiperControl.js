@@ -30,11 +30,6 @@ const screenWidth = window.innerWidth;
 const serviceSwiper = new Swiper(".swiper-service", {
   slidesPerView: screenWidth >= 760 ? 1.62 : 1.1,
   spaceBetween: 20,
-  // loop: true,
-  // navigation: {
-  //   nextEl: ".camps-swiper__button-next",
-  //   prevEl: ".camps-swiper__button-prev",
-  // },
 });
 
 
@@ -49,4 +44,11 @@ const trainersSwiper = new Swiper(".swiper-trainers", {
 });
 
 
+window.addEventListener('resize', () => {
+  const screenWidth = window.innerWidth;
+  serviceSwiper.params.slidesPerView = screenWidth >= 760 ? 1.62 : 1.1;
+  serviceSwiper.update();
 
+  trainersSwiper.params.slidesPerView = screenWidth >= 760 ? 3 : 1.3;
+  trainersSwiper.update();
+});

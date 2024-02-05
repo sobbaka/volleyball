@@ -66,4 +66,10 @@
     background-color: #d8d2c3;
     display: none;
   }
+
+  @media (max-width: to.rem(760px)) {
+    &__button {
+      display: none;
+    }
+  }
 }
