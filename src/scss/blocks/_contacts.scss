@@ -44,6 +44,53 @@
     text-align: center;
     padding: to.rem(25px 0) fluid-value(18px, 25px);
     @include font-base($font-onest, fluid-value(16px, 25px), 400, fluid-value(20.8px, 26px));
+    transition: 0.5s;
+
+    &--facebook:hover,
+    &--facebook:focus {
+      color: $white;
+      box-shadow: inset 0 to.rem(-80px) 0 0 $dark-blue;
+    }
+    &--telegram:hover,
+    &--telegram:focus {
+      color: $white;
+      box-shadow: inset 0 to.rem(-80px) 0 0 $blue;
+    }
+
+    &--instagram {
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+      transition: 0.5s;
+    }
+
+    &--instagram::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 80px;
+      transform: translateY(80px);
+      background: linear-gradient(93deg, #406ac9 0.51%, #a439ae 19.02%, #fe5440 55.36%, #ff9249 77.12%, #eb4a66 97.86%);
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &--instagram:hover,
+    &--instagram:focus {
+      color: $white;
+    }
+
+    &--instagram:hover::after,
+    &--instagram:focus::after {
+      transform: translateY(0);
+    }
+
+    &--email:hover,
+    &--email:focus {
+      box-shadow: inset 0 to.rem(-80px) 0 0 $yellow;
+    }
   }
 
   @include media-custom(760) {
