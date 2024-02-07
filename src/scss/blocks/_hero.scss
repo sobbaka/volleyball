@@ -25,7 +25,7 @@
     white-space: nowrap;
     text-fill-color: $white; // Use for Safari
     -webkit-text-fill-color: $white; // Use for Chrome
-    -webkit-text-stroke: 1px to.rem() $black; // Use for Chrome
+    -webkit-text-stroke: 1px to.rem() $black;
     -webkit-text-stroke: to.rem(1px) solid $black;
     text-stroke: to.rem(1px) solid $black;
     font-family: $font-onest;
