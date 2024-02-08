@@ -3,7 +3,11 @@
   &__image-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 83.25%;
+
+    @media (max-width: to.rem(760px)) {
+      padding-bottom: 70%;
+    }
   }
 
   &__image {
@@ -36,8 +40,8 @@
 
   &__button {
     padding: to.rem(3px);
-    width: fluid-value(50px, 100px);
-    height: fluid-value(50px, 100px);
+    width: to.rem(50px);
+    height: to.rem(50px);
     background-color: $yellow;
     display: flex;
     justify-content: center;
