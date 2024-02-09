@@ -58,8 +58,31 @@
     font-size: to.rem(17px);
     font-weight: 400;
 
+    &--visible {
+      padding-right: to.rem(10px);
+    }
+
+    &--visible::after {
+      position: absolute;
+      right: to.rem(-3px);
+      top: to.rem(7px);
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: to.rem(8px 6px 0 6px);
+      border-color: $black transparent transparent transparent;
+      transform: rotate(0deg);
+    }
+
     @media (max-width: to.rem(760px)) {
       font-size: to.rem(50px);
+
+      &--visible::after {
+        left: to.rem(75px);
+        top: to.rem(22px);
+        border-width: to.rem(18px 13.5px 0 13.5px);
+      }
     }
   }
 
