@@ -45,8 +45,8 @@
     top: fluid-value(75px, 150px);
     padding: to.rem(3px);
     z-index: 1000;
-    width: fluid-value(50px, 100px);
-    height: fluid-value(50px, 100px);
+    width: to.rem(50px);
+    height: to.rem(50px);
     background-color: $yellow;
     display: flex;
     justify-content: center;
