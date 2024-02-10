@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
-  padding: 6% to.rem(16px) 21%;
+  padding: fluid-value(24px, 60px) to.rem(16px) fluid-value(82px, 273px);
   &__container {
     display: flex;
     justify-content: center;
@@ -31,5 +31,9 @@
     text-transform: uppercase;
     margin-left: to.rem(-16px);
     @include font-base($font-onest, fluid-value(69px, 267px), 700, fluid-value(80px, 180px));
+
+    @media (max-width: to.rem(760px)) {
+      bottom: fluid-value(-18px, -11px, 320px, 760px);
+    }
   }
 }
