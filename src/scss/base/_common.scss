@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body:has(.toggle-menu__input:checked) {
+  overflow: hidden;
+}
+
 .container {
   max-width: to.rem(1320px);
   width: 100%;
