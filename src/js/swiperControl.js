@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const screenWidth = window.innerWidth;
 
 const serviceSwiper = new Swiper(".swiper-service", {
-  slidesPerView: screenWidth >= 760 ? 1.62 : 1.1,
+  slidesPerView: screenWidth >= 760 ? 2 : 1.1,
   spaceBetween: 20,
 });
 

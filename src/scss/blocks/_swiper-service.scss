@@ -8,11 +8,14 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     column-gap: to.rem(10px);
     row-gap: fluid-value(24px, 40px);
     padding: fluid-value(32px, 40px) fluid-value(16px, 40px);
 
+    &--columns {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @media screen and (max-width: to.rem(800px)) {
       grid-template-columns: 1fr;
     }
