@@ -145,14 +145,35 @@
   }
 
   &__text {
+    padding: to.rem(24px) 0;
     max-width: to.rem(448px);
+    &--stroke {
+      position: relative;
+    }
   }
-  &__text:not(:last-child) {
+
+  &__text:first-child {
     padding: fluid-value(40px, 150px) 0 to.rem(24px);
 
     @media screen and (max-width: to.rem(760px)) {
       padding: to.rem(120px) 0 to.rem(22px);
     }
+  }
+
+  &__text:last-child {
+    max-width: to.rem(380px);
+  }
+
+  &__svg {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    left: -21px;
+  }
+
+  &__path {
+    stroke-dasharray: 6488;
+    stroke-dashoffset: 6488;
   }
 
   &__btn {
