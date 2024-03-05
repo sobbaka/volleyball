@@ -34,6 +34,7 @@ document.addEventListener('scroll', () => {
   const svgTopPosition = svg.getBoundingClientRect().top + window.scrollY;
 
 
+
   if (visibleBottomPosition > svgTopPosition) {
     svg.style.strokeDashoffset = 6488 + 1500 * ((heroSectionBottom - modicator - visibleBottomPosition) / (heroSectionBottom - modicator - heroSectionTop));
   } else {
@@ -64,3 +65,4 @@ document.addEventListener('scroll', () => {
     svg_camps.style.strokeDashoffset = 0;
   }
 });
+
