@@ -25,7 +25,7 @@ const heroSection = document.querySelector('.hero');
 
 document.addEventListener('scroll', () => {
 
-  const modicator = window.innerWidth > 760 ? 500 : 100
+  const modicator = window.innerWidth > 760 ? 300 : 600
 
   const visibleBottomPosition = window.scrollY + window.innerHeight
 
@@ -35,13 +35,18 @@ document.addEventListener('scroll', () => {
 
 
 
-  if (visibleBottomPosition > svgTopPosition) {
-    svg.style.strokeDashoffset = 6488 + 1500 * ((heroSectionBottom - modicator - visibleBottomPosition) / (heroSectionBottom - modicator - heroSectionTop));
+  if (visibleBottomPosition > svgTopPosition && visibleBottomPosition < heroSectionBottom + modicator) {
+    svg.style.strokeDashoffset = 6488 + 2600 * (1 - (visibleBottomPosition - heroSectionTop) / (heroSectionBottom - heroSectionTop));
+  } else if (visibleBottomPosition < heroSectionTop) {
+    svg_camps.style.strokeDashoffset = 6488;
   } else {
     svg.style.strokeDashoffset = 0;
   }
 
 });
+
+
+
 
 const svg_camps = document.querySelector('.camps__path');
 const message = document.querySelector('.camps__message');
