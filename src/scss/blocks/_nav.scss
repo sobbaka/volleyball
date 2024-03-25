@@ -89,6 +89,16 @@
   &__switcher {
     position: absolute;
     display: none;
+
+    @media (max-width: to.rem(760px)) and (max-height: to.rem(780px)) {
+      background-color: $yellow;
+      width: 100%;
+      top: to.rem(-125px);
+    }
+  }
+
+  &__switcher &__item {
+    padding-bottom: to.rem(10px);
   }
 
   &__wrapper {
