@@ -81,26 +81,14 @@ lang.addEventListener('click', (e) => {
   }
 });
 
-const menuLinks = document.querySelectorAll('.nav__item')
+const menuLinks = document.querySelectorAll('[data-id="nav"]');
+
+// const navLinks = document.querySelectorAll('[data-id="nav"]');
 
 menuLinks.forEach(link => link.addEventListener('click', (e) => {
   if (window.innerWidth < 760) {
     document.querySelector('.toggle-menu__input').checked = false;
+    lang.querySelector('.nav__switcher').style.display = 'none';
   }
 }))
-
-const lang_selector = document.querySelector('.nav__link--visible')
-const lang_switcher = document.querySelector('.nav__switcher')
-const toggle_menu = document.querySelector('.toggle-menu')
-
-lang_selector.addEventListener('click', (e) => {
-  lang_switcher.classList.toggle('nav__none');
-})
-lang_switcher.addEventListener('click', (e) => {
-  lang_switcher.classList.toggle('nav__none');
-})
-toggle_menu.addEventListener('click', (e) => {
-  lang_switcher.classList.toggle('nav__none');
-})
-
 

@@ -1,4 +1,5 @@
 .form {
+  padding-top: 0;
   &__form {
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@
     border-radius: fluid-value(25px, 35px);
     border: to.rem(1px) solid $black;
     width: 100%;
+    @include font-mixin($font-inter, 400, $black);
   }
 
   &__btn {

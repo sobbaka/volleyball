@@ -83,7 +83,7 @@
       font-size: to.rem(50px);
 
       &--visible::after {
-        left: to.rem(75px);
+        left: to.rem(90px);
         top: to.rem(22px);
         border-width: to.rem(18px 13.5px 0 13.5px);
       }
@@ -93,12 +93,19 @@
   &__switcher {
     position: absolute;
     display: none;
-    top: to.rem(30px);
+    top: to.rem(20px);
+    padding: to.rem(10px) 0;
 
     @media (max-width: to.rem(760px)) and (max-height: to.rem(780px)) {
       background-color: $yellow;
       width: 100%;
       top: to.rem(-135px);
+    }
+
+    @media (max-width: to.rem(760px)) and (min-height: to.rem(780px)) {
+      background-color: $yellow;
+
+      top: to.rem(70px);
     }
   }
 
@@ -112,9 +119,5 @@
     &:hover .nav__switcher {
       display: block;
     }
-  }
-
-  &__none {
-    display: none;
   }
 }
