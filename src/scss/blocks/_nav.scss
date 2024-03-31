@@ -58,6 +58,10 @@
     font-size: to.rem(17px);
     font-weight: 400;
 
+    &--lang {
+      cursor: pointer;
+    }
+
     &--visible {
       padding-right: to.rem(10px);
     }
@@ -89,11 +93,12 @@
   &__switcher {
     position: absolute;
     display: none;
+    top: to.rem(30px);
 
     @media (max-width: to.rem(760px)) and (max-height: to.rem(780px)) {
       background-color: $yellow;
       width: 100%;
-      top: to.rem(-125px);
+      top: to.rem(-135px);
     }
   }
 
@@ -107,5 +112,9 @@
     &:hover .nav__switcher {
       display: block;
     }
+  }
+
+  &__none {
+    display: none;
   }
 }

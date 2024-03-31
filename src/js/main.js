@@ -89,3 +89,18 @@ menuLinks.forEach(link => link.addEventListener('click', (e) => {
   }
 }))
 
+const lang_selector = document.querySelector('.nav__link--visible')
+const lang_switcher = document.querySelector('.nav__switcher')
+const toggle_menu = document.querySelector('.toggle-menu')
+
+lang_selector.addEventListener('click', (e) => {
+  lang_switcher.classList.toggle('nav__none');
+})
+lang_switcher.addEventListener('click', (e) => {
+  lang_switcher.classList.toggle('nav__none');
+})
+toggle_menu.addEventListener('click', (e) => {
+  lang_switcher.classList.toggle('nav__none');
+})
+
+
