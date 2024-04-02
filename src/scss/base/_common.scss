@@ -64,6 +64,10 @@ body:has(.toggle-menu__input:checked) {
   cursor: pointer;
   transition: 0.5s;
 
+  &__link {
+    display: block;
+  }
+
   @media (min-width: to.rem(1024px)) {
     // &__hero:focus,
     &__main:hover {
