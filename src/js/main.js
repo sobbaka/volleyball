@@ -54,6 +54,10 @@ const svg_camps = document.querySelector('.camps__path');
 const message = document.querySelector('.camps__message');
 
 document.addEventListener('scroll', () => {
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    svg_camps.style.display = 'none'
+    return
+  }
   const visibleBottomPosition = window.scrollY + window.innerHeight
   const messagesTop = message.getBoundingClientRect().top + window.scrollY - 50;
   const messagesBottom = message.getBoundingClientRect().bottom + window.scrollY + 100;

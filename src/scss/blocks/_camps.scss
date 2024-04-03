@@ -64,10 +64,16 @@
     position: absolute;
     top: -8px;
     left: 3px;
-    _::-webkit-full-page-media,
-    _:future,
-    :root .safari_only {
-      left: 10px;
+
+    @media (max-width: to.rem(460px)) {
+      transform: scale(1.1);
+      right: 10px;
+      -webkit-transform: scale(1.1);
+      -webkit-right: 10px;
+    }
+
+    @media not all and (min-resolution: 0.001dpcm) {
+      display: none;
     }
   }
   &__path {
