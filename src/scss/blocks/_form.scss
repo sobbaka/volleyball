@@ -1,5 +1,8 @@
 .form {
   padding-top: 0;
+  &__title {
+    text-align: center;
+  }
   &__form {
     display: flex;
     flex-direction: column;
@@ -23,5 +26,11 @@
     max-width: to.rem(550px);
     width: 100%;
     margin-top: 0;
+  }
+
+  @media (max-width: to.rem(760px)) {
+    &__title {
+      text-align: left;
+    }
   }
 }

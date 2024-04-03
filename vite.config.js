@@ -7,24 +7,25 @@ const publicFolder = resolve(__dirname, 'public')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    root: root,
-    base: './',
-    publicDir: publicFolder,
-    server: {
-        watch: {
-            usePolling: true
-        },
-        open: true
+  root: root,
+  base: './',
+  publicDir: publicFolder,
+  assetsInclude: ["**/*.php"],
+  server: {
+    watch: {
+      usePolling: true
     },
-    build: {
-        outDir: outDir,
-        emptyOutDir: true,
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'src/index.html'),
-                english: resolve(__dirname, 'src/english.html'),
-                georgian: resolve(__dirname, 'src/georgian.html'),
-            },
-        }
-    },
+    open: true
+  },
+  build: {
+    outDir: outDir,
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src/index.html'),
+        english: resolve(__dirname, 'src/english.html'),
+        georgian: resolve(__dirname, 'src/georgian.html'),
+      },
+    }
+  },
 })

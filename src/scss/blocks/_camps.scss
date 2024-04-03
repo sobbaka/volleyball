@@ -64,6 +64,11 @@
     position: absolute;
     top: -8px;
     left: 3px;
+    _::-webkit-full-page-media,
+    _:future,
+    :root .safari_only {
+      left: 10px;
+    }
   }
   &__path {
     stroke-dasharray: 1270;

@@ -6,6 +6,8 @@ import "the-new-css-reset/css/reset.css";
 import '../scss/main.scss';
 import './swiperControl.js';
 
+import '../mail.php';
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
