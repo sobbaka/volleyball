@@ -1,5 +1,5 @@
 .form {
-  padding-top: 0;
+  background-color: $yellow;
   &__title {
     text-align: center;
   }
@@ -19,6 +19,7 @@
     border-radius: fluid-value(25px, 35px);
     border: to.rem(1px) solid $black;
     width: 100%;
+    background-color: #fff;
     @include font-mixin($font-inter, 400, $black);
   }
 
@@ -26,6 +27,8 @@
     max-width: to.rem(550px);
     width: 100%;
     margin-top: 0;
+    background-color: #fff;
+    border: to.rem(1px) solid $black;
   }
 
   @media (max-width: to.rem(760px)) {
