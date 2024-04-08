@@ -68,7 +68,7 @@
 
     &--visible::after {
       position: absolute;
-      right: to.rem(-3px);
+      right: to.rem(-8px);
       top: to.rem(7px);
       content: "";
       width: 0px;
